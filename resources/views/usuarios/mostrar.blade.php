@@ -7,14 +7,15 @@
 @section("content")
 <div class="container">
 
-<h1>Usuarios</h1>
+<h1>USUARIOS REGISTRADOS</h1>
 
-<table class="table">
+<table class="table table-bordered table-dark">
     <tr>
-        <td>id</td>
-        <td>nombres</td>
-        <td>apellidos</td>
-        <td>pas</td>
+        <th scope="col">id</td>
+        <th>NOMBRES</th>
+        <th>APELLIDOS</th>
+        <th>PAIS</th>
+        
     </tr>
     @foreach($usuarios as $usuario)
     <tr>

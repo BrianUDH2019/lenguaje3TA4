@@ -19,16 +19,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/usuarios/mostrar', [UsuarioController::class, "index"])
         ->name("umostrar")
         ->middleware("auth");
 Route::get('/usuarios/registrar', [UsuarioController::class, "registrar"])
         ->name("uregistrar")
         ->middleware("auth");
+ Route::post('/usuarios/guardar', [UsuarioController::class, "guardar"])
+        ->name("uguardar")
+        ->middleware("auth");
+
+Route::get('/ruta1', function () {
+    // Lógica de la ruta 1
+    return view('/usuarios/mostrar');
+})->name('umostrar');
+
 
 
 Route::get('/autenticar',[UsuarioController::class, "login"]);
 Route::post('/autenticar',[UsuarioController::class, "autenticar"]);
+
 
 
 Auth::routes();

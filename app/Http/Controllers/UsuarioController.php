@@ -27,11 +27,11 @@ class UsuarioController extends Controller
         
         Usuario::create($request->all());
         return redirect("/usuarios/mostrar");
-        /*$usuario->nombres =$request->input("nombres");
+        /* $usuario->nombres =$request->input("nombres");
         $usuario->apellidos =$request->input("apellidos");
         $usuario->direccion =$request->input("direccion");
         $usuario->save();
-        return redirect("/usuarios/mostrar");*/
+        return redirect("/usuarios/mostrar"); */
         
      }
 
@@ -42,11 +42,11 @@ class UsuarioController extends Controller
         public function autenticar(Request $request){
             $username = $request->inpút("username");
             $password = $request->inpút("password");
-            if(Usuarios::where('username', $username)->first("username")==null){
+            if(Usuario::where('username', $username)->first("username")==null){
                 return "no existe";
             }
             else{
-                if(Usuarios::where('password', $password)->first("password")!=null){
+                if(Usuario::where('password', $password)->first("password")!=null){
                     return "logueado";
                 }
                 else{
