@@ -7,7 +7,7 @@
 @section("content")
 <div class="container">
 
-<h1>USUARIOS REGISTRADOS</h1>
+<h1>ESTABLECIMIENTOS</h1>
 
 <table class="table table-bordered table-dark">
     <tr>

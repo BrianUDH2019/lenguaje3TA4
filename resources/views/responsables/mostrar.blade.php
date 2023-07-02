@@ -7,30 +7,26 @@
 @section("content")
 <div class="container">
 
-<h1>USUARIOS REGISTRADOS</h1>
+<h1>RESPONSABLES</h1>
 
 <table class="table table-bordered table-dark">
     <tr>
         <th scope="col">id</td>
         <th>NOMBRES</th>
-        <th>APELLIDOS</th>
-        <th>PAIS</th>
-        <th>RESPONSABLE</th>
-
+        <th>EMAIL</th>
         
     </tr>
-    @foreach($usuarios as $usuario)
+    @foreach($responsables as $responsable)
     <tr>
         <td>
-             @if($usuario->id ==1234567890)
+             @if($responsable->id ==1234567890)
                 55
              @else
-                {{$usuario->id}}
+                {{$responsable->id}}
              @endif
         </td> 
-        <td>{{$usuario->nombres}}</td>
-        <td>{{$usuario->apellidos}}</td>
-        <td>{{$usuario->pais}}</td>
+        <td>{{$responsable->nombres}}</td>
+        <td>{{$responsable->email}}</td>
     </tr>
     @endforeach
 </table>

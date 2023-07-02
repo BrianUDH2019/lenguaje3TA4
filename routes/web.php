@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\ResponsableController;
+
 use App\Http\Controllers\Auth\Logincontroller;
+use App\Http\Controllers\EstablecimientoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,11 +33,28 @@ Route::get('/usuarios/registrar', [UsuarioController::class, "registrar"])
         ->name("uguardar")
         ->middleware("auth");
 
-Route::get('/ruta1', function () {
-    // Lógica de la ruta 1
-    return view('/usuarios/mostrar');
-})->name('umostrar');
+Route::get('/responsables/mostrar', [ResponsableController::class, "index"])
+        ->name("rmostrar")
+        ->middleware("auth");
+Route::get('/responsables/registrar', [ResponsableController::class, "registrar"])
+        ->name("rregistrar")
+        ->middleware("auth");
+ Route::post('/responsables/guardar', [ResponsableController::class, "guardar"])
+        ->name("rguardar")
+        ->middleware("auth");
 
+Route::get('/establecimientos/mostrar', [EstablecimientoController::class, "index"])
+        ->name("emostrar")
+        ->middleware("auth");
+Route::get('/establecimientos/registrar', [EstablecimientoController::class, "registrar"])
+        ->name("eregistrar")
+        ->middleware("auth");
+ Route::post('/responsables/guardar', [EstablecimientoController::class, "guardar"])
+        ->name("eguardar")
+        ->middleware("auth");
+
+
+#Route::get('/asignar-responsable/{id}', 'ResponsableController@asignarResponsable')->name('asignar-responsable');
 
 
 Route::get('/autenticar',[UsuarioController::class, "login"]);
