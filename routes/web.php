@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\ResponsableController;
-
-use App\Http\Controllers\Auth\Logincontroller;
 use App\Http\Controllers\EstablecimientoController;
+use App\Http\Controllers\DestinoController;
+use App\Http\Controllers\Auth\Logincontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +34,6 @@ Route::get('/usuarios/registrar', [UsuarioController::class, "registrar"])
         ->middleware("auth");
 
 #rutas para los responsables
-
 Route::get('/responsables/mostrar', [ResponsableController::class, "index"])
         ->name("rmostrar")
         ->middleware("auth");
@@ -46,7 +45,6 @@ Route::get('/responsables/registrar', [ResponsableController::class, "registrar"
         ->middleware("auth");
 
 #rutas para los establecimientos
-
 Route::get('/establecimientos/mostrar', [EstablecimientoController::class, "index"])
         ->name("emostrar")
         ->middleware("auth");
@@ -55,6 +53,17 @@ Route::get('/establecimientos/registrar', [EstablecimientoController::class, "re
         ->middleware("auth");
  Route::post('/establecimientos/guardar', [EstablecimientoController::class, "guardar"])
         ->name("eguardar")
+        ->middleware("auth");
+
+#rutas para los destinos
+Route::get('/destinos/mostrar', [DestinoController::class, "index"])
+        ->name("dmostrar")
+        ->middleware("auth");
+Route::get('/destinos/registrar', [DestinoController::class, "registrar"])
+        ->name("dregistrar")
+        ->middleware("auth");
+ Route::post('/destinos/guardar', [DestinoController::class, "guardar"])
+        ->name("dguardar")
         ->middleware("auth");
 
 

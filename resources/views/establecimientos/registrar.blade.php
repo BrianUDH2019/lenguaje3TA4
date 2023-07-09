@@ -1,20 +1,23 @@
 @extends("layouts.app")
-
+<nav class="navbar navbar-dark bg-dark">
+<li><a href="/home">REGRESAR A LA PANTALLA DE INICIO</a></li>
+<li><a href="mostrar">VER ESTABLECIMIENTOS</a></li>
+</nav>
 @section("content")
 <div class="container">
 <h1> REGISTRO DE USUARIOS <h1>
 <form method="post" action="guardar">  
     @csrf
-      <input @error('nombres') style="border: 1px solid red" @enderror class="form-control mb-3" type="text" name="nombres" placeholder="Ingrese Nombres" />
-      @error('nombres')
+      <input @error('nombreEst') style="border: 1px solid red" @enderror class="form-control mb-3" type="text" name="nombreEst" placeholder="Ingrese Nombre de establecimeitno" />
+      @error('nombreEst')
     <div class="text-danger mb-3" style="font-size:20px">* {{ $message }}</div>
       @enderror
-      <input @error('apellidos') style="border: 1px solid red" @enderror class="form-control mb-3" type="text" name="apellidos" placeholder="Ingrese Apellidos" />
-      @error('apellidos')
+      <input @error('direccionEst') style="border: 1px solid red" @enderror class="form-control mb-3" type="text" name="direccionEst" placeholder="Ingrese direccion del establecimiento" />
+      @error('direccionEst')
     <div class="text-danger mb-3" style="font-size:20px">* {{ $message }}</div>
       @enderror
-      <input @error('pais') style="border: 1px solid red" @enderror class="form-control mb-3" type="text" name="pais" placeholder="Ingrese Pais" />
-      @error('pais')
+      <input @error('fechaEst') style="border: 1px solid red" @enderror class="form-control mb-3" type="datetime-local" name="fechaEst" placeholder="Ingrese fecha" />
+      @error('fechaEst')
     <div class="text-danger mb-3" style="font-size:20px">* {{ $message }}</div>
       @enderror
       

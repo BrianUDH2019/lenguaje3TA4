@@ -1,5 +1,8 @@
 @extends("layouts.app")
-
+<nav class="navbar navbar-dark bg-dark">
+<li><a href="/home">REGRESAR A LA PANTALLA DE INICIO</a></li>
+<li><a href="mostrar">VER RESPONSABLES</a></li>
+</nav>
 @section("content")
 <div class="container">
 <h1> CREAR Responsable <h1>

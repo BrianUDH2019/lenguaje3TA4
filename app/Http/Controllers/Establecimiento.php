@@ -9,5 +9,6 @@ use App\Models\Modelo;
 class Usuario extends Model
 {
     use HasFactory;
-    protected $fillable = ["nombres","apellidos","pais"];
+    protected $fillable = ["nombreEst","direccionEst","fechaEst","_token"];
+    
 }

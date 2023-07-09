@@ -1,9 +1,5 @@
 @extends("layouts.app")
-
-
-<nav class="navbar navbar-dark bg-dark">
 <li><a href="/home">REGRESAR A LA PANTALLA DE INICIO</a></li>
-</nav>
 <!--@section("titulo")
     Mostrar Usuarios
 @endsection-->
@@ -11,12 +7,12 @@
 @section("content")
 <div class="container">
 
-<h1>USUARIOS REGISTRADOS</h1>
+<h1>DESTINOS</h1>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CREAR USUARIOS</title>
+    <title>CREAR DESTINOS</title>
     <style>
         .button {
             display: inline-block;
@@ -29,35 +25,28 @@
     </style>
 </head>
 <body>
-    <a href="registrar" class="button">REGISTRAR USUARIOS</a>
+    <a href="registrar" class="button">REGISTRAR DESTINOS</a>
 </body>
 </html>
 
 <table class="table table-bordered table-dark">
     <tr>
-        <th scope="col">id</td>
-        <th>NOMBRES</th>
-        <th>APELLIDOS</th>
-        <th>PAIS</th>
+        <th>LUGAR</th>
+        <th>DEPARTAMENTO</th>
+        <th>PROVINCIA</th>
+        <th>DISTRITO</th>
 
         
     </tr>
-    @foreach($usuarios as $usuario)
+    @foreach($destinos as $destino)
     <tr>
-        <td>
-             @if($usuario->id ==1234567890)
-                55
-             @else
-                {{$usuario->id}}
-             @endif
-        </td> 
-        <td>{{$usuario->nombres}}</td>
-        <td>{{$usuario->apellidos}}</td>
-        <td>{{$usuario->pais}}</td>
+        <td>{{$destino->lugar}}</td>
+        <td>{{$destino->departamento}}</td>
+        <td>{{$destino->provincia}}</td>
+        <td>{{$destino->distrito}}</td>
 
     </tr>
     @endforeach
 </table>
 </div>
-
 @endsection

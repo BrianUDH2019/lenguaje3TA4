@@ -5,8 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Establecimiento extends Modelo
+class Destino extends Model
 {
     use HasFactory;
-    protected $fillable = ["nombreEst","direccionEst","fechaEst","_toquen"];
+    protected $fillable = ["lugar","departamento","provincia","distrito"];
+    public $timestamps = false;
+
 }

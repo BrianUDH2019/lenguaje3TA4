@@ -1,36 +1,45 @@
 @extends("layouts.app")
 <li><a href="/home">REGRESAR A LA PANTALLA DE INICIO</a></li>
-<!--@section("titulo")
-    Mostrar Usuarios
-@endsection-->
+
 
 @section("content")
 <div class="container">
 
 <h1>ESTABLECIMIENTOS</h1>
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>REGISTRAR ESTABLECIMIENTOS</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="registrar" class="button">REGISTRAR ESTABLECIMIENTOS</a>
+</body>
+</html>
+
 <table class="table table-bordered table-dark">
     <tr>
-        <th scope="col">id</td>
-        <th>NOMBRES</th>
-        <th>APELLIDOS</th>
-        <th>PAIS</th>
-        <th>RESPONSABLE</th>
+        <th>NOMBRE DEL ESTABLECIMIENTO</th>
+        <th>DIRECCION DEL ESTABLECIMIENT</th>
+        <th>FECHA ESTABLECIMIENTO</th>
 
         
     </tr>
-    @foreach($usuarios as $usuario)
+    @foreach($establecimientos as $establecimiento)
     <tr>
-        <td>
-             @if($usuario->id ==1234567890)
-                55
-             @else
-                {{$usuario->id}}
-             @endif
-        </td> 
-        <td>{{$usuario->nombres}}</td>
-        <td>{{$usuario->apellidos}}</td>
-        <td>{{$usuario->pais}}</td>
+        <td>{{$establecimiento->nombreEst}}</td>
+        <td>{{$establecimiento->direccionEst}}</td>
+        <td>{{$establecimiento->fechaEst}}</td>
     </tr>
     @endforeach
 </table>

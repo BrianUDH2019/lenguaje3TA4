@@ -1,35 +1,31 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Establecimiento;
-
-
-
 use Illuminate\Http\Request;
+use App\Models\Destino;
 
-class EstablecimientoController extends Controller
+
+class DestinoController extends Controller
 {
     public function index(){
-        $establecimientos = Establecimiento::All();
-        return view("establecimientos.mostrar")
-        ->with("establecimientos", $establecimientos);
+        $destinos = Destino::All();
+        return view("destinos.mostrar")
+        ->with("destinos", $destinos);
     
     }
      public function registrar(){
-        return view("establecimientos.registrar");
+        return view("destinos.registrar");
      }
 
 
      public function guardar(Request $request){
         $validacion = $request->validate([
             
-
         ]);
 
         
-        Establecimiento::create($request->all());
-        return redirect("/establecimientos/mostrar");
-       
+        Destino::create($request->all());
+        return redirect("/destinos/mostrar");
         
      }
 
@@ -40,11 +36,11 @@ class EstablecimientoController extends Controller
         public function autenticar(Request $request){
             $username = $request->inpút("username");
             $password = $request->inpút("password");
-            if(Establecimiento::where('username', $username)->first("username")==null){
+            if(Destino::where('username', $username)->first("username")==null){
                 return "no existe";
             }
             else{
-                if(Establecimiento::where('password', $password)->first("password")!=null){
+                if(Destino::where('password', $password)->first("password")!=null){
                     return "logueado";
                 }
                 else{

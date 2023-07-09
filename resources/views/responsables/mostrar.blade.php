@@ -8,8 +8,26 @@
 <div class="container">
 
 <h1>RESPONSABLES</h1>
-        
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CREAR RESPONSABLES</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="registrar" class="button">REGISTRAR RESPONSABLES</a>
+</body>
+</html>
 
 <table class="table table-bordered table-dark">
     <tr>
