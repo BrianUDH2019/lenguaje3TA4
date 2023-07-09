@@ -1,5 +1,9 @@
 @extends("layouts.app")
 
+
+<nav class="navbar navbar-dark bg-dark">
+<li><a href="/home">REGRESAR A LA PANTALLA DE INICIO</a></li>
+</nav>
 <!--@section("titulo")
     Mostrar Usuarios
 @endsection-->
@@ -8,6 +12,26 @@
 <div class="container">
 
 <h1>USUARIOS REGISTRADOS</h1>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CREAR USUARIOS</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="registrar" class="button">REGISTRAR USUARIOS</a>
+</body>
+</html>
 
 <table class="table table-bordered table-dark">
     <tr>
@@ -31,8 +55,10 @@
         <td>{{$usuario->nombres}}</td>
         <td>{{$usuario->apellidos}}</td>
         <td>{{$usuario->pais}}</td>
+
     </tr>
     @endforeach
 </table>
 </div>
+
 @endsection

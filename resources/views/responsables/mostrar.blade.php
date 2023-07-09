@@ -1,5 +1,5 @@
 @extends("layouts.app")
-
+<li><a href="/home">REGRESAR A LA PANTALLA DE INICIO</a></li>
 <!--@section("titulo")
     Mostrar Usuarios
 @endsection-->
@@ -8,6 +8,8 @@
 <div class="container">
 
 <h1>RESPONSABLES</h1>
+        
+
 
 <table class="table table-bordered table-dark">
     <tr>

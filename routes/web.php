@@ -22,7 +22,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+#rutas para los usuarios
 Route::get('/usuarios/mostrar', [UsuarioController::class, "index"])
         ->name("umostrar")
         ->middleware("auth");
@@ -32,6 +32,8 @@ Route::get('/usuarios/registrar', [UsuarioController::class, "registrar"])
  Route::post('/usuarios/guardar', [UsuarioController::class, "guardar"])
         ->name("uguardar")
         ->middleware("auth");
+
+#rutas para los responsables
 
 Route::get('/responsables/mostrar', [ResponsableController::class, "index"])
         ->name("rmostrar")
@@ -43,13 +45,15 @@ Route::get('/responsables/registrar', [ResponsableController::class, "registrar"
         ->name("rguardar")
         ->middleware("auth");
 
+#rutas para los establecimientos
+
 Route::get('/establecimientos/mostrar', [EstablecimientoController::class, "index"])
         ->name("emostrar")
         ->middleware("auth");
 Route::get('/establecimientos/registrar', [EstablecimientoController::class, "registrar"])
         ->name("eregistrar")
         ->middleware("auth");
- Route::post('/responsables/guardar', [EstablecimientoController::class, "guardar"])
+ Route::post('/establecimientos/guardar', [EstablecimientoController::class, "guardar"])
         ->name("eguardar")
         ->middleware("auth");
 
