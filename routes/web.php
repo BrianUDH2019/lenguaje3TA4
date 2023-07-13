@@ -55,6 +55,8 @@ Route::get('/establecimientos/registrar', [EstablecimientoController::class, "re
         ->name("eguardar")
         ->middleware("auth");
 
+
+
 #rutas para los destinos
 Route::get('/destinos/mostrar', [DestinoController::class, "index"])
         ->name("dmostrar")

@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Establecimiento extends Modelo
 {
     use HasFactory;
-    protected $fillable = ["nombreEst","direccionEst","fechaEst","_toquen"];
+    protected $fillable = ["nombreEst","direccionEst","fechaEst","responsable_id","_toquen"];
+
+    public function responsables()
+    {
+        return $this->belongsTo(Responsable::class,'reponsable_id','id');
+    }
 }

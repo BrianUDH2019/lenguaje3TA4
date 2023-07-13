@@ -16,7 +16,10 @@ return new class extends Migration
             $table->string("nombreEst");
             $table->string("direccionEst");
             $table->datetime("fechaEst");
-
+            
+            $table->unsignedBigInteger('responsable_id');
+            $table->foreign('responsable_id')->references('id')->on('responsables');
+        
             
         });
     }

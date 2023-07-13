@@ -1,8 +1,9 @@
 @extends("layouts.app")
 
 
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-light" style="background-color: #9BEAD9;">
 <li><a href="/home">REGRESAR A LA PANTALLA DE INICIO</a></li>
+
 </nav>
 <!--@section("titulo")
     Mostrar Usuarios

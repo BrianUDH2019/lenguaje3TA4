@@ -8,11 +8,12 @@
 <h1> REGISTRO DE USUARIOS <h1>
 <form method="post" action="guardar">  
     @csrf
-      <input @error('nombreEst') style="border: 1px solid red" @enderror class="form-control mb-3" type="text" name="nombreEst" placeholder="Ingrese Nombre de establecimeitno" />
+    
+    <input @error('nombreEst') style="border: 1px solid red" @enderror class="form-control mb-3" type="text" name="nombreEst" placeholder="Ingrese Nombre de establecimeitno" />
       @error('nombreEst')
     <div class="text-danger mb-3" style="font-size:20px">* {{ $message }}</div>
       @enderror
-      <input @error('direccionEst') style="border: 1px solid red" @enderror class="form-control mb-3" type="text" name="direccionEst" placeholder="Ingrese direccion del establecimiento" />
+    <input @error('direccionEst') style="border: 1px solid red" @enderror class="form-control mb-3" type="text" name="direccionEst" placeholder="Ingrese direccion del establecimiento" />
       @error('direccionEst')
     <div class="text-danger mb-3" style="font-size:20px">* {{ $message }}</div>
       @enderror
@@ -20,9 +21,12 @@
       @error('fechaEst')
     <div class="text-danger mb-3" style="font-size:20px">* {{ $message }}</div>
       @enderror
+   
+     
       
       <input class="btn btn-primary" type="submit" value="guardar"/>
 </form>
+
 <br>
 <!--
 @if ($errors->any())    <div class="alert alert-danger">

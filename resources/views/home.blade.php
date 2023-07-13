@@ -1,10 +1,16 @@
 @extends('layouts.app')
 @section('content')
 
+<nav class="navbar navbar-expand-lg bg-danger">
+    <a class="navbar-brand fw-bold text-light mx-auto text-center" href="/home">SISTEMA TURÍSTICO</a>
+</nav>
+    
 <!DOCTYPE html>
+
 <html>
     
 <head>
+    
     <title>Barra de navegación con imagen de fondo</title>
     <style>
         /* Estilos de la barra de navegación */
@@ -54,9 +60,21 @@
         
 
     </ul>
-    <!-- Resto del contenido de tu página -->
 </body>
 </html>
+
+<div class="fixed-bottom">
+    <div class="container">
+        <a href="https://www.facebook.com/municipalidadhco">
+            <img src="https://cdn-icons-png.flaticon.com/256/124/124010.png" alt="Imagen 1" width="40" height="40" class="img-thumbnail">
+        </a>
+        <a href="https://www.munihuanuco.gob.pe/">
+            <img src="https://cdn-icons-png.flaticon.com/128/1178/1178997.png" alt="Imagen 2" width="40" height="40" class="img-thumbnail">
+        </a>
+    </div>
+</div>
+
+
 
 
 
